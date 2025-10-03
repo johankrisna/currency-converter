@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-exchange-alt"></i> Konversi Mata Uang</h1>
+        <p class="subtitle">Konversi nilai tukar mata uang secara real-time dengan riwayat konversi</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2><i class="fas fa-calculator"></i> Konversi</h2>
+            <div class="converter-form">
+                <div class="input-group">
+                    <label for="amount">Jumlah Uang</label>
+                    <input type="number" id="amount" placeholder="Masukkan jumlah" min="0" step="0.01" value="100">
+                </div>
+                
+                <div class="currency-row">
+                    <div class="input-group">
+                        <label for="from">Dari Mata Uang</label>
+                        <select id="from">
+                            <option value="USD">USD - Dolar Amerika</option>
+                            <option value="IDR">IDR - Rupiah Indonesia</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - Pound Sterling</option>
+                            <option value="JPY">JPY - Yen Jepang</option>
+                            <option value="SGD">SGD - Dolar Singapura</option>
+                        </select>
+                    </div>
+                    
+                    <button class="swap-btn" id="swap">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <div class="input-group">
+                        <label for="to">Ke Mata Uang</label>
+                        <select id="to">
+                            <option value="IDR">IDR - Rupiah Indonesia</option>
+                            <option value="USD">USD - Dolar Amerika</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - Pound Sterling</option>
+                            <option value="JPY">JPY - Yen Jepang</option>
+                            <option value="SGD">SGD - Dolar Singapura</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" id="convert">
+                    <i class="fas fa-sync-alt"></i> Konversi Sekarang
+                </button>
+            </div>
+            
+            <div class="result" id="result">
+                <h3>Hasil Konversi</h3>
+                <p class="conversion-rate" id="conversion-rate">1 USD = 0 IDR</p>
+                <p class="conversion-amount" id="conversion-amount">0 IDR</p>
+                <p class="last-updated" id="last-updated">Terakhir diperbarui: -</p>
+            </div>
+            
+            <div class="api-info">
+                <span>Data dari ExchangeRate-API</span>
+                <span id="api-status"><i class="fas fa-circle" style="color: #2ecc71;"></i> API Online</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-history"></i> Riwayat Konversi</h2>
+            <div class="history-list" id="history-list">
+                <!-- Riwayat akan dimuat di sini -->
+            </div>
+            
+            <div class="clear-history">
+                <button class="clear-btn" id="clear-history">
+                    <i class="fas fa-trash"></i> Hapus Semua Riwayat
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Aplikasi Konversi Mata Uang &copy; 2023 | 
+            <span class="tag">JavaScript</span>
+            <span class="tag">API</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
